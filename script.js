@@ -12,6 +12,7 @@ addBtn.addEventListener('click', () => {
   input.value = '';
 });
 
+//small commit 3
 // Toggle complete
 list.addEventListener('click', e => {
   if (e.target.tagName === 'LI') {
@@ -24,4 +25,11 @@ list.addEventListener('dblclick', e => {
   if (e.target.tagName === 'LI') {
     e.target.remove();
   }
+});
+
+// Clear all completed tasks
+const clearBtn = document.getElementById('clear-completed-btn');
+clearBtn.addEventListener('click', () => {
+  document.querySelectorAll('#task-list li.completed')
+    .forEach(li => li.remove());
 });
