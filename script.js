@@ -21,6 +21,7 @@ addBtn.addEventListener('click', () => {
     return;
   }
 
+
   const li = document.createElement('li');
   li.textContent = text;
   $(refs.list).appendChild(li);
@@ -41,7 +42,9 @@ list.addEventListener('click', e => {
 });
 
 
+
 $(refs.list).addEventListener('dblclick', e => {
+
 
 // small commit 2
 // Delete on double-click
@@ -51,6 +54,9 @@ list.addEventListener('dblclick', e => {
     e.target.remove();
   }
 });
+
+// small commit 3
+
 
 
 // Clear completed
@@ -69,5 +75,4 @@ clearBtn.addEventListener('click', () => {
   document.querySelectorAll('#task-list li.completed')
     .forEach(li => li.remove());
 });
-
 
